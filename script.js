@@ -16,15 +16,15 @@ function divide(a, b){
 
 function operator(o, n1, n2){
     if (o == '/'){
-         console.log(divide(n1, n2));
+         return divide(n1, n2);
     }
     if (o == '+'){
-        console.log(add(n1, n2));
+        return add(n1, n2);
     }
     if (o == '-'){
-        console.log(substract(n1, n2));
+        return substract(n1, n2);
     }
     if (o == '*'){
-        console.log(multiply(n1, n2));
+        return multiply(n1, n2);
     }
 }
