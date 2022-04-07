@@ -1,0 +1,32 @@
+.container{
+    width: 500px;
+
+}
+
+#resultado{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    margin-top: 30px;
+    height: 72px;
+}
+
+.resultado1, .valor-actual, .valor-anterior {
+    margin: 0;
+}
+
+.btn {
+    width: 100%;
+    background-color: green;
+    margin: 0px;
+    border: 1px solid black;
+}
+
+.row{
+    margin: 0;
+}
