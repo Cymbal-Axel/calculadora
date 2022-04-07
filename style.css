@@ -1,7 +1,11 @@
-.container{
-    width: 500px;
-
+body{
+    background-image: url(https://cdn.wallpapersafari.com/22/32/RWg5f1.png);
 }
+
+.container{
+    width: 35vw;
+}
+
 
 #resultado{
 
@@ -11,13 +15,17 @@
     align-items: flex-end;
     background-color: black;
     color: white;
-    border-radius: 25px;
     margin-top: 30px;
-    height: 72px;
+    border-radius: 20px;
+    height: 9vh;
 }
 
 .resultado1, .valor-actual, .valor-anterior {
     margin: 0;
+}
+
+.col-3, .col-6{
+    padding: 0;
 }
 
 .btn {
@@ -25,6 +33,7 @@
     background-color: green;
     margin: 0px;
     border: 1px solid black;
+
 }
 
 .row{
