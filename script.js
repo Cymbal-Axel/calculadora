@@ -1,6 +1,7 @@
 
-var numberButton = document.querySelectorAll('.numeros')
-var valorActual = document.querySelector('.valor-actual')
+var numberButtons = document.querySelectorAll('.numeros');
+var valorActual = document.querySelector('.valor-actual');
+var resetButton = document.querySelector('.reset');
 
 function add(a, b) {
     return a + b;
@@ -34,11 +35,22 @@ function operator(o, n1, n2) {
 }
 
 //La siguiente funcion debe imprimir que boton se clickea.
-function numberSelect(){
-    for(let i = 0; i < numberButton.length; i++){
-        if(numberButton[i].onClick){
-          valorActual.textContent = `${valorActual.textContent}${numberButton[i].textContent}`;
-        }
-    }    
+function numberSelect(e){
+    for(let i = 0; i < numberButtons.length; i++){
+        var valorAnterior = valorActual.textContent;
+        numberButtons[i].addEventListener("click", function(){
+
+            valorActual.textContent = `${numberButtons[i].textContent}${valorAnterior}`;
+        })        
+          
+        
+    }
 }
 numberSelect();
+
+function clearButton(){
+    resetButton.addEventListener("click", function(){
+        valorActual.textContent = 0;
+    })
+}
+clearButton();
