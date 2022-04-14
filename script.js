@@ -6,7 +6,7 @@ var equalSign = document.querySelector('#equal1');
 var result = document.querySelector('#resultado');
 
 function add(a, b) {
-    return a + b;
+    return +a + +b;
 };
 
 function multiply(a, b) {
@@ -90,7 +90,7 @@ function equal() {
         
         for (let i = 0; i < arrayCurrentValue.length; i++) {
             if (arrayCurrentValue[i] == '+') {
-                result.textContent = calculate('+', firstValue.toString(), secondValue.toString());
+                result.textContent = calculate('+', firstValue, secondValue);
             }
         }
     }
