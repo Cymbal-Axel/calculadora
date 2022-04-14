@@ -3,7 +3,7 @@ var currentValue = document.querySelector('.valor-actual');
 var resetButton = document.querySelector('.reset');
 var sumSign = document.querySelector('#sum1');
 var equalSign = document.querySelector('#equal1');
-var result = document.querySelector('#resultado');
+var result = document.querySelector('.resultado1');
 
 function add(a, b) {
     return +a + +b;
@@ -53,7 +53,8 @@ numberSelect();
 function clearButton() {
     resetButton.addEventListener("click", function () {
         currentValue.textContent = '';
-    });
+        result.textContent = 0;
+    })
 };
 clearButton();
 
