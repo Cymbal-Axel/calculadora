@@ -4,9 +4,10 @@ var resetButton = document.querySelector('.reset');
 var sumSign = document.querySelector('#sum1');
 var equalSign = document.querySelector('#equal1');
 var result = document.querySelector('.resultado1');
+var oneDelete = document.querySelector('#borrrar');
 
 function add(a, b) {
-    return +a + +b;
+    return Number(a) + Number(b);
 };
 
 function multiply(a, b) {
@@ -54,17 +55,18 @@ function clearButton() {
     resetButton.addEventListener("click", function () {
         currentValue.textContent = '';
         result.textContent = 0;
-    })
+        })
 };
 clearButton();
 
-function sum() {
+
     sumSign.onclick = function () {
         currentValue.textContent += '+';
     }
-}
 
-function equal() {
+
+
+
     //si se hace click en el signo igual se ejecuta el siguiente codigo.
     equalSign.onclick = function () {
         //en la variable almaceno el contenido de currentValue en un array para poder recorrerlo 
@@ -88,11 +90,11 @@ function equal() {
                 }
             }
         }
-        
+
         for (let i = 0; i < arrayCurrentValue.length; i++) {
             if (arrayCurrentValue[i] == '+') {
                 result.textContent = calculate('+', firstValue, secondValue);
             }
         }
     }
-}
+    
