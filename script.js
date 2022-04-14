@@ -35,17 +35,23 @@ function operator(o, n1, n2) {
 }
 
 //La siguiente funcion debe imprimir que boton se clickea.
-function numberSelect(e){
-    for(let i = 0; i < numberButtons.length; i++){
-        var valorAnterior = valorActual.textContent;
-        numberButtons[i].addEventListener("click", function(){
+function numberSelect(){
 
-            valorActual.textContent = `${numberButtons[i].textContent}${valorAnterior}`;
-        })        
-          
-        
+    for(let i = 0; i < numberButtons.length; i++){
+        numberButtons[i].onclick = function(){
+            valorActual.textContent = numberButtons[i].textContent + valorActual.textContent;
+        }
+        }
     }
-}
+    /*for(let i = 0; i < numberButtons.length; i++){
+        numberButtons[i].addEventListener("click", function(){
+            var numero = numberButtons[i].textContent;
+            valorActual.textContent = numero;
+        })        
+          */
+        
+    
+
 numberSelect();
 
 function clearButton(){
