@@ -56,7 +56,7 @@ numberSelect();
 
 function clearButton(){
     resetButton.addEventListener("click", function(){
-        valorActual.textContent = 0;
+        valorActual.textContent = '';
     })
 }
 clearButton();
