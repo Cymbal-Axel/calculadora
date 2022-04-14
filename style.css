@@ -20,8 +20,9 @@ body{
     height: 9vh;
 }
 
-.resultado1, .valor-actual, .valor-anterior {
+.resultado1, .valor-actual{
     margin: 0;
+    font-size: 30px;
 }
 
 .col-3, .col-6{
