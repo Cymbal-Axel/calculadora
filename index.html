@@ -18,7 +18,7 @@
             <div id="resultado" class="col">
                 <ol class="valor-anterior">VALOR ANTERIOR</ol>
                 <ol class="valor-actual"></ol>
-                <ol class="resultado1">RESULTADO</ol>
+                <ol id="resultado2" class="resultado1">RESULTADO</ol>
             </div>
 
         </div>
@@ -72,7 +72,7 @@
                 <button onclick="numberSelect()" class="btn btn-succes numeros">3</button>
             </div>
             <div class="col-3">
-                <button class="btn btn-succes operacion">+</button>
+                <button onclick="sum()" id="sum1"class="btn btn-succes operacion">+</button>
             </div>
         </div>
         <div class="row">
@@ -83,7 +83,7 @@
                 <button class="btn btn-succes">.</button>
             </div>
             <div class="col-3">
-                <button class="btn btn-succes operacion">=</button>
+                <button onclick="equal()" id="equal1" class="btn btn-succes operacion">=</button>
             </div>
         </div>
 
