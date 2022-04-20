@@ -16,5 +16,11 @@ a modificar, y los siguientes valores son los
 
     agregarNumero(numero) {
         this.valorActual = numero;
+        this.imprimirValores();
+    }
+
+    imprimirValores(){
+        this.displayValorActual.textContent = this.valorActual;
+        this.valorAnterior.textContent = this.valorAnterior
     }
 }
