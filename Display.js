@@ -14,6 +14,13 @@ a modificar, y los siguientes valores son los
         this.valorAnterior = '';
     }
 
+    borrar(){
+    /* En el slice al tener el numero negativo, indica un desplazamiento desde el final del array. 
+       Si tuviera un -2 eliminaria los dos ultimos numeros. */
+        this.valorActual = this.valorActual.toString().slice(0,-1);
+        this.imprimirValores();
+    }
+
     agregarNumero(numero) {
 //Linea 20: Si el numero seleccionado es un punto, verifico con el includes
 // si ya hay un punto, y si se cumple no devuelvo nada para evitar que se agreguen mas puntos.
