@@ -15,7 +15,10 @@ a modificar, y los siguientes valores son los
     }
 
     agregarNumero(numero) {
-        this.valorActual = numero;
+//Linea 20: Si el numero seleccionado es un punto, verifico con el includes
+// si ya hay un punto, y si se cumple no devuelvo nada para evitar que se agreguen mas puntos.
+        if(numero === '.' && this.valorActual.includes('.')) return;
+        this.valorActual = this.valorActual.toString() + numero.toString();
         this.imprimirValores();
     }
 
