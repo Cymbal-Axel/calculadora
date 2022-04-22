@@ -5,6 +5,7 @@ class Display {
         this.displayValorActual = displayValorActual;
         this.displayValorAnterior = displayValorAnterior;
         this.calculador = new Calculadora();
+        this.tipoOperacion = undefined;
 /*voy a agregar un valorActual y un 
 valorAnterior que es distinto al de 
 valorDisplay, el display es el elemento que se va 
@@ -18,6 +19,13 @@ a modificar, y los siguientes valores son los
     /* En el slice al tener el numero negativo, indica un desplazamiento desde el final del array. 
        Si tuviera un -2 eliminaria los dos ultimos numeros. */
         this.valorActual = this.valorActual.toString().slice(0,-1);
+        this.imprimirValores();
+    }
+
+    borrarTodo(){
+        this.valorActual = '';
+        this.valorAnterior = '';
+        this.tipoOperacion = undefined;
         this.imprimirValores();
     }
 
